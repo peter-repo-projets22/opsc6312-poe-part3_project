@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!-- Toolbar -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/white"
+        android:elevation="4dp"
+        android:theme="?attr/actionBarTheme">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <ImageButton
+                android:id="@+id/backArrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="Back"
+                android:padding="8dp"
+                android:src="@drawable/ic_arrow_back" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="Scale the recipe"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <ImageButton
+                android:id="@+id/profileIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="Profile"
+                android:padding="8dp"
+                android:src="@drawable/ic_profile" />
+
+        </LinearLayout>
+    </androidx.appcompat.widget.Toolbar>
+
+    <!-- ScrollView for the content -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:padding="16dp"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="top">
+
+            <!-- Recipe Image -->
+            <ImageView
+                android:id="@+id/recipeImage"
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:scaleType="centerCrop"
+                android:background="@drawable/rounded_corners"
+                android:src="@drawable/pasta"
+                android:contentDescription="Recipe image"
+                android:layout_marginBottom="16dp" />
+
+            <!-- Recipe Info -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Recipe Info"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="12dp"
+                android:textColor="#000000" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_marginBottom="16dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/recipeInfo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Mediterranean Pizza\nPrep: 30 min • Cooking time: 15 min"
+                    android:inputType="textMultiLine"
+                    android:minLines="2"
+                    android:gravity="center"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:background="#EFE8E0"
+                    android:focusable="false"
+                    android:clickable="false" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Ingredients -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ingredients"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="12dp"
+                android:textColor="#000000" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/ingredientsList"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="1. 3 cups of flour\n2. 200 grams of butter\n3. 200 ml of water\n4. 50 ml of oil"
+                    android:inputType="textMultiLine"
+                    android:minLines="4"
+                    android:gravity="top|start"
+                    android:textSize="14sp"
+                    android:background="#D9CFC2"
+                    android:focusable="false"
+                    android:clickable="false" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Scale Factor -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Enter a Scale Factor"
+                android:textSize="14sp"
+                android:layout_marginTop="24dp"
+                android:textColor="#000000" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/editTextText7"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="e.g. 1.5, 2, 0.5"
+                    android:inputType="numberDecimal" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Scale Recipe Button -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnScaleRecipe"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:paddingVertical="16dp"
+                android:text="SCALE RECIPE"
+                app:cornerRadius="24dp"
+                app:backgroundTint="@color/black"
+                android:textColor="@color/white" />
+
+            <!-- Bottom spacer for better scroll UX -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="48dp" />
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

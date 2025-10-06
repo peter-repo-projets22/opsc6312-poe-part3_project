@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "22915536789",
+    "project_id": "feedmytummy",
+    "storage_bucket": "feedmytummy.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:22915536789:android:91cf6823525c2fad5fc89c",
+        "android_client_info": {
+          "package_name": "com.example.feedmytummy"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyASkc__EMEge7nMQbAMHo2H2THoVuv0gTE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

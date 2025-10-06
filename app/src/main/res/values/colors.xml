@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="LightYellow">#FFFFC5</color>
+    <color name="Red">#F44336</color>
+    <color name="red">#F44336</color>
+
+    <!-- Primary App Colors -->
+    <color name="colorPrimary">#F8F5EC</color> <!-- Background beige -->
+    <color name="colorPrimaryDark">#E6E2D7</color> <!-- Slightly darker beige -->
+    <color name="colorAccent">#D4A373</color> <!-- Accent brown -->
+
+    <!-- Additional Brown Shades -->
+    <color name="brown">#8B5E3C</color>
+    <color name="blue">#0B91F2</color> <!-- Standard brown -->
+    <color name="brownLight">#C19A6B</color> <!-- Light brown -->
+    <color name="brownDark">#5C4033</color> <!-- Darker brown -->
+
+    <!-- Text Colors -->
+    <color name="textPrimary">#000000</color> <!-- Black -->
+    <color name="textSecondary">#7D7D7D</color> <!-- Gray for secondary text -->
+    <color name="textHint">#9E9E9E</color> <!-- Hint/placeholder -->
+
+    <color name="dark_brown">#5D4037</color> <!-- new dark brown -->
+    <color name="gray">#888888</color>
+
+    <!-- UI Element Colors -->
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="divider">#E0E0E0</color> <!-- Light gray line -->
+    <color name="searchBorder">#CCCCCC</color> <!-- Search box border -->
+    <color name="deleteRed">#D9534F</color> <!-- Red for delete action -->
+    <color name="editBlue">#007BFF</color> <!-- Blue for edit action -->
+
+
+</resources>
