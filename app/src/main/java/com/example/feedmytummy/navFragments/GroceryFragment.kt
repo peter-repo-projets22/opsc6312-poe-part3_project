@@ -1,7 +1,13 @@
 package com.example.feedmytummy.navFragments
 
+import android.graphics.Color
+import android.graphics.Paint
+import android.os.Environment
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import com.example.feedmytummy.R
+import java.io.File
+import java.io.FileOutputStream
 
 
 class GroceryFragment : Fragment() {
@@ -28,6 +34,15 @@ class GroceryFragment : Fragment() {
                 tvGroceryList.text = groceryList.mapIndexed { i, s -> "${i + 1}. $s" }.joinToString("\n")
             }
         }
+        val exportbutton = view.findViewById<android.widget.Button>(R.id.exportbutton)
+        exportbutton.setOnClickListener {
+            if (groceryList.isEmpty()) {
+                Toast.makeText(requireContext(), "Grocery list is empty!", Toast.LENGTH_SHORT).show()
+            } else {
+                createPdf(groceryList)
+            }
+        }
+
         val backArrow = view.findViewById<android.widget.ImageView>(R.id.backArrow)
         backArrow.setOnClickListener {
             parentFragmentManager.beginTransaction()
@@ -41,5 +56,39 @@ class GroceryFragment : Fragment() {
                 .addToBackStack(null)
                 .commit()
         }
+    }
+    // 📝 Generate PDF file
+    private fun createPdf(groceryList: List<String>) {
+        val pdfDocument = android.graphics.pdf.PdfDocument()
+        val pageInfo = android.graphics.pdf.PdfDocument.PageInfo.Builder(595, 842, 1).create()
+        val page = pdfDocument.startPage(pageInfo)
+
+        val canvas = page.canvas
+        val paint = Paint()
+        paint.color = Color.BLACK
+        paint.textSize = 16f
+
+        var yPosition = 50
+        canvas.drawText("🛒 Grocery List", 50f, yPosition.toFloat(), paint)
+        yPosition += 30
+
+        groceryList.forEachIndexed { index, item ->
+            canvas.drawText("${index + 1}. $item", 50f, yPosition.toFloat(), paint)
+            yPosition += 25
+        }
+
+        pdfDocument.finishPage(page)
+
+        val downloadsDir = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS)
+        val file = File(downloadsDir, "GroceryList.pdf")
+
+        try {
+            pdfDocument.writeTo(FileOutputStream(file))
+            Toast.makeText(requireContext(), "PDF saved to Downloads: ${file.name}", Toast.LENGTH_LONG).show()
+        } catch (e: Exception) {
+            Toast.makeText(requireContext(), "Error creating PDF: ${e.message}", Toast.LENGTH_LONG).show()
+        }
+
+        pdfDocument.close()
     }
 }

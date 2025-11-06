@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="sign_in">Teken in</string>
+    <string name="username">Gebruikersnaam</string>
+    <string name="email">E-pos</string>
+    <string name="password">Wagwoord</string>
+    <string name="dont_have_an_account">Het nie \'n rekening nie?</string>
+    <string name="sign_up">Registreer</string>
+    <string name="forgot_password">Wagwoord vergeet</string>
+</resources>

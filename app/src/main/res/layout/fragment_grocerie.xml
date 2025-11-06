@@ -77,16 +77,26 @@
         android:background="@android:drawable/edit_text" />
 
     <!-- Add Button -->
+
+    <!-- Grocery List -->
     <Button
         android:id="@+id/addButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Add"
-        android:backgroundTint="@color/black"
         android:layout_gravity="center_horizontal"
-        android:layout_marginBottom="24dp" />
+        android:layout_marginBottom="24dp"
+        android:backgroundTint="@color/black"
+        android:text="Add" />
 
-    <!-- Grocery List -->
+    <Button
+        android:id="@+id/exportbutton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="24dp"
+        android:backgroundTint="@color/black"
+        android:text="Download List" />
+
     <TextView
         android:id="@+id/tvGroceryList"
         android:layout_width="match_parent"

@@ -42,7 +42,7 @@ class SignupFragment : Fragment() {
             auth.createUserWithEmailAndPassword(email, password)
                 .addOnCompleteListener { task ->
                     if (task.isSuccessful) {
-                        // Registration success, navigate to HomeFragment
+                        Toast.makeText(context, "Registration successful", Toast.LENGTH_SHORT).show()
                         parentFragmentManager.beginTransaction()
                             .replace(R.id.frame_container, SignInFragment())
                             .commit()
