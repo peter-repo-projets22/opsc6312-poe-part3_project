@@ -29,14 +29,12 @@
 
 8 SSO login 
 
-9 Offline mode - backup credentials are stored in the sql database 
+9 Offline mode - backup credentials are stored in the sql database locally 
 
 10 Realtime Notification 
 
-
 11 Multilanguage  
 
-12 user can download grocery list in pdf formart 
+12 user can download grocery list in pdf formart - user defined feature 4 
 
-
-13 user can store backup login crdentials 
+13 user can store backup login crdentials - user defined feature 5
