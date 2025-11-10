@@ -27,13 +27,13 @@
 
 ******new features for part 3 ** 
 
-8 SSO login 
+8 SSO login - user clicks on google icon and proceeds with account creation
 
 9 Offline mode - backup credentials are stored in the sql database locally 
 
-10 Realtime Notification 
+10 Realtime Notification - feedmytummy application sends notifications to users .eg " what are we cooking today? "
 
-11 Multilanguage  
+11 Multilanguage  - user can switch different languages for sign in screen , either english, afrikaans or zulu 
 
 12 user can download grocery list in pdf formart - user defined feature 4 
 
