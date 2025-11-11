@@ -1,3 +1,6 @@
+
+
+
 1 The user is able to signup for the application using, full name, username, email, phone number and password which is then stored in the google firebase which can then be used in the login process to authenticate the user logging into the application.
 
 
